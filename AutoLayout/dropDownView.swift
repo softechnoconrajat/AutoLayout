@@ -18,6 +18,8 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     var delegate : dropDownProtocol!
     
     
+    
+    
     //
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,6 +33,7 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.delegate = self
         
         
         tableView.translatesAutoresizingMaskIntoConstraints = false

@@ -11,14 +11,21 @@ import UIKit
 protocol dropDownProtocol  {
     func dropDownPressed(string:String)
 }
+
+
+
 class dropDownBtn: UIButton, dropDownProtocol{
+    
+    
     
     // Drop Down Press Function for DropDown Menu
     func dropDownPressed(string:String)  {
         self.setTitle(string, for: .normal)
         self.dismissDropDown()
+      
+        
     }
-    
+
  
     var dropView = dropDownView()
     var height = NSLayoutConstraint()
@@ -34,6 +41,8 @@ override init(frame: CGRect) {
         dropView.translatesAutoresizingMaskIntoConstraints = false
         self.layer.zPosition = 1
     }
+    
+    
     override func didMoveToSuperview() {
         self.superview?.addSubview(dropView)
         self.superview?.bringSubviewToFront(dropView)

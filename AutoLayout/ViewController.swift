@@ -13,21 +13,14 @@ import Moscapsule
 
 
 
+class ViewController: UIViewController{
 
-class ViewController: UIViewController {
     
-   
     var screenWidth : CGFloat = 0.0
     var screenHeight : CGFloat = 0.0
     
     var vT = VechileCurrentTime()
 
-    
-    
-    
-    
-    
-    
     
     // {} is referred to as closure, or anon. function
     
@@ -222,13 +215,15 @@ class ViewController: UIViewController {
         button.setTitle("Restaurants", for: .normal)
         //button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.addTarget(self, action: #selector(pressNow), for: .touchUpInside)
+      //  button.addTarget(self, action: #selector(dropDownPressed), for: .touchUpInside)
         button.backgroundColor = UIColor.black
         return button
     }()
     
+   
     
-
+   
+   
     
     
     //MQTT Implementation
