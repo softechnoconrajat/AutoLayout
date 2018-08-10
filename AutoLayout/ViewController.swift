@@ -23,6 +23,13 @@ class ViewController: UIViewController{
 
     
     // {} is referred to as closure, or anon. function
+   
+    
+    
+    func restNameGet(){
+        let selectionVC = storyboard?.instantiateViewController(withIdentifier: "dropDownBtn") as! dropDownBtn
+        selectionVC.selectionDelegate = self
+    }
     
     
     // Logo for the Herfy app
@@ -1153,7 +1160,12 @@ extension Date {
 }// End of Extension Date
 
 
-
+extension ViewController : restNameDelegate{
+    func restName(name: String) {
+        print(name)
+    }
+    
+}
 
 
 

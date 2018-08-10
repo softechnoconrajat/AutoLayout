@@ -13,16 +13,21 @@ protocol dropDownProtocol  {
 }
 
 
+protocol restNameDelegate {
+    func restName(name:String)
+}
 
 class dropDownBtn: UIButton, dropDownProtocol{
     
     
+    var selectionDelegate : restNameDelegate!
     
     // Drop Down Press Function for DropDown Menu
     func dropDownPressed(string:String)  {
         self.setTitle(string, for: .normal)
+        let na : String? = string
+        selectionDelegate.restName(name: na!)
         self.dismissDropDown()
-      
         
     }
 
